@@ -1,0 +1,14 @@
+:root{
+    -palette-color1: #232b2b;
+    -palette-color2: #353839;
+    -palette-color3: #3b444b;
+    -palette-color4: #414a4c;
+}
+
+
+*{
+    margin: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: var(-palette-color1);
+}
