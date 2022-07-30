@@ -1,0 +1,20 @@
+{
+  "name": "biograph",
+  "version": "1.0.0",
+  "description": "this is the page to live from Gonzalo Nahuel Rolón.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gonzalonah/bio.git"
+  },
+  "keywords": [],
+  "author": "gonnron@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gonzalonah/bio/issues"
+  },
+  "homepage": "https://github.com/Gonzalonah/bio#readme"
+}
