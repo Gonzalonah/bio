@@ -1,3 +1,7 @@
 import React from "react";
-const App = () => <h1>Hola mundp</h1>
+const App = () => (
+<div className="conteiner">
+    <h1>👋Hello👋</h1>
+    </div>
+    )
 export default App
