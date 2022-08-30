@@ -31,28 +31,30 @@ function time(){
 time()
  */
 
+const App = () => {
+  const [ counter, setCounter ] = useState(0)
 
-  const App = () => {
-    
-    const [ counter, setCounter ] = useState(0)
-    setTimeout(    
-        () => setCounter(counter + 1),
-        1000
-      )
-    return (
+   const handleClick = () => {  
+    setCounter(counter + 1)  
+    console.log('clicked', counter)  
+  } 
+  const initialiced = () => setCounter(0) 
+  return (
+    <div>
       <div>{counter}</div>
-    )
-  }
-
+        <button onClick={handleClick}>
+          plus
+        </button>
+        <button onClick={initialiced}> 
+          zero
+        </button>
+      </div>
+  )
+}
 const refresh=()=>{
   ReactDOM.render(    
     <App />
     , document.getElementById('root')
     );
   }
-
-  setInterval(()=>{
-    
-refresh()
-counter += 1
-  },1000)
+   refresh()
