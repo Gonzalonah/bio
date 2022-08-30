@@ -30,20 +30,13 @@ function time(){
 
 time()
  */
-const Display=(props)=>{
-  return(
-    <div>{props.counter}</div>
-  )
-}
-const Button=(props)=>{
-  //crear un boton reutilizable
-  return(
-    <button onClick={props.handleClick}>
-      {/* //usa la prop de text para crear un boton reutilizable. */} 
-      {props.text}
-    </button>
-  )
-}
+const Display = ({ counter }) => <div>{counter}</div>//simplifica lo anterior para depurar
+const Button = ({ handleClick, text }) => (
+  <button onClick={handleClick}>
+    {text}
+  </button>
+)//simplifica lo anterior para depurar
+
 const App = () => {
   const [ counter, setCounter ] = useState(0)
 
