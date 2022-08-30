@@ -30,24 +30,37 @@ function time(){
 
 time()
  */
-
+const Display=(props)=>{
+  return(
+    <div>{props.counter}</div>
+  )
+}
+const Button=(props)=>{
+  //crear un boton reutilizable
+  return(
+    <button onClick={props.handleClick}>
+      {/* //usa la prop de text para crear un boton reutilizable. */} 
+      {props.text}
+    </button>
+  )
+}
 const App = () => {
   const [ counter, setCounter ] = useState(0)
 
-   const handleClick = () => {  
-    setCounter(counter + 1)  
-    console.log('clicked', counter)  
-  } 
-  const initialiced = () => setCounter(0) 
+  const incrementa1=()=>setCounter(counter+1)//suma
+  const disminuye1=()=> setCounter(counter-1)//disminuye
+  const initialiced = () => setCounter(0) //inicializa
+
+  /*Para crear una nueva funcionabilidad(funcion) se crear un const con la funcion 
+    y en el componente Button se lo pasa por la prop.handleClick mientras que el texto que se muestra
+    lo pasa por la prop.text
+  */
   return (
     <div>
-      <div>{counter}</div>
-        <button onClick={handleClick}>
-          plus
-        </button>
-        <button onClick={initialiced}> 
-          zero
-        </button>
+      <Display counter={counter}/>{/* muestra el contador */}
+        <Button handleClick={incrementa1} text='plus'/>
+        <Button handleClick={disminuye1} text='minus'/>
+        <Button handleClick={initialiced} text='zero'/>
       </div>
   )
 }
@@ -57,4 +70,4 @@ const refresh=()=>{
     , document.getElementById('root')
     );
   }
-   refresh()
+refresh()
